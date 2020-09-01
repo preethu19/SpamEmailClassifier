@@ -4,9 +4,7 @@
 ## Demo
 Link: [https://spam-e-mail-classifier.herokuapp.com/](https://spam-e-mail-classifier.herokuapp.com/)
 
-[![](https://i.imgur.com/R1g2wvC.png)](https://flight-price-prediction-api.herokuapp.com/)
-
-[![](https://i.imgur.com/p0aeL6c.png)](https://flight-price-prediction-api.herokuapp.com/)
+[![](https://github.com/preethu19/SpamEmailClassifier/blob/master/SpamEmailClassifier.gif)](https://spam-e-mail-classifier.herokuapp.com/)
 
 ## Overview
 This is a Flask web app which detects whether a E-Mail is spam or not spam.
