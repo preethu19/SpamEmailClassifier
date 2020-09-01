@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V20</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='util.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename ='main.css') }}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+
+	<div class="container-contact100">
+
+		<div class="wrap-contact100">
+			<span class="contact100-form-symbol">
+				<img src="{{ url_for('static', filename='symbol-01.png') }}" alt="SYMBOL-MAIL">
+			</span>
+
+			<form class="contact100-form validate-form flex-sb flex-w" action="" method="POST">
+				<span class="contact100-form-title">
+					Spam E-Mail Classifier
+				</span>
+				{% with messages = get_flashed_messages(with_categories=true) %}
+	                {% if messages %}
+	                    {% for category, message in messages %}
+	                        <div class="alert alert-{{ category }}" id="flash" role="alert">
+	                            {{ message }}
+	                        </div>
+	                    {% endfor %}
+	                {% endif %}
+	            {% endwith %}
+
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<textarea class="input100" name="text" placeholder="Write Us A Message"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button class="contact100-form-btn">
+						Send
+					</button>
+				</div>
+        {% if message %}
+          <h1>{{ message }}</h1>
+        {% endif %}
+			</form>
+		</div>
+	</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	
+</body>
+</html>
